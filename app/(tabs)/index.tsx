@@ -35,7 +35,7 @@ const steps = [
   'Fotoğrafı sürükleyerek istediğiniz şekilde konumlandırın',
   'Çerçeve rengini değiştirmek için renk seçiciyi kullanın',
   'İsterseniz çerçeveye metin ekleyin ve metin rengini ayarlayın',
-  'Kalite seçeneğini belirleyin ve Fotoğrafı İndir butonuna tıklayın'
+  'Kalite seçeneğini belirleyin ve Fotoğrafı Kaydet butonuna tıklayın'
 ];
 
 const styles = StyleSheet.create({
