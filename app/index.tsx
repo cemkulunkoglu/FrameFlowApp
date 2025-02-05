@@ -9,6 +9,7 @@ import {
   Platform,
   TextInput,
   Share,
+  Alert,
 } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import * as MediaLibrary from 'expo-media-library';
@@ -140,7 +141,11 @@ export default function HomeScreen() {
       try {
         const hasPermission = await requestPermission();
         if (!hasPermission) {
-          alert('Fotoğrafı kaydetmek için galeri izni gerekiyor.');
+          Alert.alert(
+            "Uyarı",  // Başlık
+            "Fotoğrafı kaydetmek için galeri izni gerekiyor.",  // Mesaj
+            [{ text: "Tamam" }]  // Butonlar
+          );
           return;
         }
 
@@ -149,10 +154,18 @@ export default function HomeScreen() {
         const asset = await MediaLibrary.createAssetAsync(uri);
         await MediaLibrary.createAlbumAsync('FrameFlow', asset, false);
 
-        alert('Fotoğraf başarıyla galeriye kaydedildi!');
+        Alert.alert(
+          "Başarılı",  // Başlık
+          "Fotoğraf başarıyla galeriye kaydedildi!",  // Mesaj
+          [{ text: "Tamam" }]  // Butonlar
+        );
       } catch (error) {
         console.error('Kaydetme hatası:', error);
-        alert('Fotoğraf kaydedilirken bir hata oluştu.');
+        Alert.alert(
+          "Hata",  // Başlık
+          "Fotoğraf kaydedilirken bir hata oluştu.",  // Mesaj
+          [{ text: "Tamam" }]  // Butonlar
+        );
       }
     }
   };

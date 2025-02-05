@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "FrameFlowApp",
+    "name": "FrameFlow",
     "slug": "FrameFlowApp",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -20,7 +20,8 @@
         "android.permission.READ_EXTERNAL_STORAGE",
         "android.permission.WRITE_EXTERNAL_STORAGE"
       ],
-      "package": "com.anonymous.FrameFlowApp"
+      "package": "com.frameflow.app",
+      "versionCode": 1
     },
     "web": {
       "bundler": "metro",
@@ -49,6 +50,9 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "react-native-google-mobile-ads": {
+      "android_app_id": "ca-app-pub-3940256099942544~3347511713"
     }
   }
 }
